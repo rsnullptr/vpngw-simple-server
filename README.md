@@ -12,7 +12,7 @@ That same node will work as gateway for other instances in the network
 .Golang: https://golang.org
 ```
 
-###Purpose
+### Purpose
 This little restfull server has the only purpose to allow a noob user to switch between VPN 
 configuration without concerning about the how to linux style.
 
