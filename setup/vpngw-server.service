@@ -1,0 +1,17 @@
+## copy to: /etc/systemd/system/vpngw-server.service
+## change the executable for your distribution...
+
+[Unit]
+Description=Vpngw Server
+
+[Service]
+ExecStart=/opt/vpngw-simple-server/vpngw-server-<arch> 80
+Restart=always
+User=root
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/opt/vpngw-simple-server
+
+[Install]
+WantedBy=multi-user.target

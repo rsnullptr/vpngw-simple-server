@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo -e '\n\nwhere:'
+echo 'country:' $(curl ifconfig.co/country -s)
+echo 'city:' $(curl ifconfig.co/city -s)
+echo 'ext ip:' $(curl ifconfig.co -s)

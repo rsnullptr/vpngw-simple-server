@@ -1,0 +1,12 @@
+#!/bin/bash
+
+FILE=/etc/wireguard/$1.conf
+if [ -f "$FILE" ]; then
+    /code/scripts/stopvpn
+    /code/scripts/stopwg
+
+    sudo wg-quick up $1
+else 
+    echo "server configuration $1 does not exist."
+fi
+

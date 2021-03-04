@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo 'listing all available configs:'
+ls -la /etc/openvpn/*.conf; \
+ls -la /etc/wireguard/*.conf

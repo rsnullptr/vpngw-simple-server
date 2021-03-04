@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo -e 'speedtest cli executing... \n'
+echo $(speedtest --simple)

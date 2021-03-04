@@ -1,0 +1,6 @@
+#!/bin/bash
+
+existing=$(sudo wg show | grep interface:)
+tunwg=$(echo ${existing:10})
+sudo wg-quick down $tunwg
+
