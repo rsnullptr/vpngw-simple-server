@@ -5,7 +5,7 @@
 Description=Vpngw Server
 
 [Service]
-ExecStart=/opt/vpngw-simple-server/vpngw-server-<arch> 80
+ExecStart=/opt/vpngw-simple-server/setup/prebuilt/vpngw-server-linux64
 Restart=always
 User=root
 Group=nogroup

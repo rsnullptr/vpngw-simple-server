@@ -2,9 +2,7 @@
 
 FILE=/etc/openvpn/$1.conf
 if [ -f "$FILE" ]; then
-    /code/scripts/stopvpn
-    /code/scripts/stopwg
-
+    sudo ./scripts/stop
     sudo openvpn --config /etc/openvpn/$1.conf --daemon
 else 
     echo "server configuration $1 does not exist."

@@ -1,5 +1,4 @@
 #!/bin/bash
 
-/code/scripts/stopwg; \
-/code/scripts/stopvpn;
-
+./scripts/stopwg; \
+./scripts/stopvpn;
