@@ -17,12 +17,6 @@ func Speedtest(c *gin.Context) {
 	where(c)
 }
 
-func DefaultVpn(c *gin.Context) {
-	c.Params = append(c.Params, gin.Param{Key: "conf", Value: "tun_raf"})
-	StartWgVpn(c)
-	where(c)
-}
-
 func List(c *gin.Context) {
 	xmd(c, "scripts/list", "list")
 	c.Writer.WriteString("\n available endpoints: ")

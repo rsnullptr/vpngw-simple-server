@@ -22,11 +22,20 @@ configuration without concerning about the how to linux style.
 
 ### run the Gin on linux (goos=linux)
 ```  
-cd $GOPATH
 gi clone https://github.com/rsnullptr/vpngw-simple-server.git
 cd vpngw-simple-server
 go build
-./vpngw-server
+
+./vpngw-server --help
+Usage of ./vpngw-server:
+  -crt string
+        ssl crt file
+  -key string
+        ssl key file
+  -port int
+        port to serve (default 9090)
+
+./vpngw-server --port 9043 --crt sslcert/some.crt --key sslcert/some.key
 
 note: if no port is provided the hardocded one is used, check main.go
 ```
