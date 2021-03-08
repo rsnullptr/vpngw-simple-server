@@ -36,5 +36,5 @@ func main() {
 
 	engine := NewEngine()
 	SetEndpoints(engine, &endpoints)
-	StartListening(engine, "", port)
+	StartListening(engine, "", port, "selfcerts/server.crt", "selfcerts/server.key")
 }

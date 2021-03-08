@@ -16,8 +16,12 @@ func SetEndpoints(engine *gin.Engine, endpoints *map[string]gin.HandlerFunc) {
 	}
 }
 
-func StartListening(engine *gin.Engine, host string, port int) {
-	engine.Run(host + ":" + strconv.Itoa(port))
+func StartListening(engine *gin.Engine, host string, port int, certFile string, keyFile string) {
+	if certFile != "" && keyFile != "" {
+		engine.RunTLS(host+":"+strconv.Itoa(port), certFile, keyFile)
+	} else {
+		engine.Run(host + ":" + strconv.Itoa(port))
+	}
 }
 
 //private
