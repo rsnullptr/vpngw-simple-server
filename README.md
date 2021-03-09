@@ -66,9 +66,10 @@ curl localhost:9090/wg/tunX -> will start vpn and kill previous ones, on conf tu
 
 #### Pre built executables
 ```
-env GOOS=linux GOARCH=arm GOARM=7 go build
-env GOOS=linux GOARCH=arm GOARM=6 go build
-env GOOS=linux go build 
-env GOOS=darwin go build
-env GOOS=windows go build   
+env GOOS=linux GOARCH=arm GOARM=7 go build && mv vpngw-server setup/prebuilt/vpngw-server-arm7; \
+env GOOS=linux GOARCH=arm GOARM=6 go build && mv vpngw-server setup/prebuilt/vpngw-server-arm6; \
+env GOOS=linux go build  && mv vpngw-server setup/prebuilt/vpngw-server-linux64; \
+env GOOS=darwin go build && mv vpngw-server setup/prebuilt/vpngw-server-darwin; \
+env GOOS=windows go build && mv vpngw-server.exe setup/prebuilt/vpngw-server-win64.exe; \
+ls -la setup/prebuilt
 ```
